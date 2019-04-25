@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("TAG", "Running");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 // Start up the add fish activity with an intent
+                Log.d("TAG", "Button has been clicked");
                 Intent detailActIntent = new Intent(view.getContext(), AddFishActivity.class);
                 finish();
                 startActivity(detailActIntent);
